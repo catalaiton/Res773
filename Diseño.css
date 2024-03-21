@@ -1,0 +1,19 @@
+.formulario-container {
+    /* Centrar el formulario en la página */
+    margin: 0 auto;
+    width: 500px;
+    /* Esquema del formulario */
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+  }
+
+  .resultado {
+    margin: 0 auto; 
+    width: 400px;
+    height: 80px;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    overflow-wrap: break-word;
+  }
