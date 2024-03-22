@@ -1,5 +1,6 @@
 const escenariosOcupacionales = [
     {
+      
       frecuenciaMin: 0.1,
       frecuenciaMax: 30,
       Einc: (frecuencia) => 660 / (frecuencia ** 0.7),
@@ -9,9 +10,9 @@ const escenariosOcupacionales = [
     {
       frecuenciaMin: 30,
       frecuenciaMax: 400,
-      Einc: 61,
-      Hinc: 0.16,
-      Sinc: 10,
+      Einc: ()=> 61,
+      Hinc: ()=>0.16,
+      Sinc: ()=>10,
     },
     {
       frecuenciaMin: 400,
@@ -40,9 +41,9 @@ const escenariosOcupacionales = [
     {
       frecuenciaMin: 30,
       frecuenciaMax: 400,
-      Einc: 27.7,
-      Hinc: 0.073,
-      Sinc: 2,
+      Einc: ()=>27.7,
+      Hinc: ()=>0.073,
+      Sinc: ()=>2,
     },
     {
       frecuenciaMin: 400,
@@ -56,7 +57,7 @@ const escenariosOcupacionales = [
       frecuenciaMax: 300000, // 300 GHz
       Einc: () => null, // No aplica
       Hinc: () => null, // No aplica
-      Sinc: 10,
+      Sinc: ()=>10,
     },
   ];
 
@@ -89,7 +90,9 @@ const escenariosOcupacionales = [
     }
   
     // Calcula la potencia radiada (suponiendo antena isotrópica)
-    const potenciaRadiada = potencia * Math.pow(10, ganancia / 10); // Convierte ganancia en dB a lineal
+    
+    const potenciaRadiada = potencia * ganancia ;
+
   
     // Selecciona el escenario adecuado
     let escenarioSeleccionado;
@@ -122,25 +125,24 @@ const escenariosOcupacionales = [
     const SAR1 = document.getElementById("SAR");
     const limite = document.getElementById("limite");
     const cumplimiento = document.getElementById("cumplimiento");
-
+  
     let limiteSAR;
     if (tipoUsuario === "Poblacion General") {
-    limiteSAR = 1; // W/kg
+      limiteSAR = 1; // W/kg
     } else if (tipoUsuario === "Ocupacional") {
-    limiteSAR = 10; // W/kg
+      limiteSAR = 10; // W/kg
     } else {
-    alert("Tipo de usuario no válido");
-    return;
+      alert("Tipo de usuario no válido");
+      return;
     }
-
+  
     const SARStr = ` ${SAR.toFixed(3)} W/kg.`;
     const limiteSARStr = ` Limite para ${tipoUsuario}: ${limiteSAR} W/kg.`;
     const cumplimientoStr = `${SAR <= limiteSAR ? "Cumple con la Resolución 773" : "No cumple con la Resolución 773"}`;
-
+  
     SAR1.value = SARStr;
     limite.value = limiteSARStr;
     cumplimiento.value = cumplimientoStr;
-
-  
-
   }
+  
+  
