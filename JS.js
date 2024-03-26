@@ -65,6 +65,32 @@ const escenariosOcupacionales = [
   const densidad = 1000; // kg/m^3 (densidad del tejido humano asumida)
   const impedanciaEspacioLibre = Math.PI * 4 * Math.pow(10, -7); // Ohmio (impedancia del espacio libre)
   
+  function Comprobacion() {
+
+    const altura = parseFloat(document.getElementById("Altura").value);
+    const potencia = parseFloat(document.getElementById("Potencia").value);
+    const tipoAntena = document.getElementById("TipoAntena").value;
+  
+    let requiereMedicion = true;
+  
+    if (
+      // Antena de radiodifusión sonora o televisiva
+      (tipoAntena === "Antena de Radiodifusion Sonora o Televisiva" && altura <= 10 && potencia < 100) ||
+      // Antena de telecomunicaciones
+      (tipoAntena === "Antena de Telecomunicaciones" && altura <= 15 && potencia < 50) ||
+      // Antena de radioaficionados
+      (tipoAntena === "Antena de Radioaficionados" && altura <= 20 && potencia < 100)
+    ) {
+      requiereMedicion = false;
+      alert ("Su antena no requiere medicion");
+    }
+  
+    if (requiereMedicion) {
+      PTRadiada();
+    }
+  }
+  
+
   function PTRadiada() {
     // Evita el comportamiento predeterminado del envío del formulario
     event.preventDefault();
