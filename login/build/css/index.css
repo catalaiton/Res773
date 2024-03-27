@@ -215,8 +215,23 @@ input {
 }
 
 .cartoon-container {
-	width: 22em;
-	margin-bottom: 2.5em;
+	position: relative;
+    width: 300px; /* Ajusta el tamaño según sea necesario */
+    height: 300px; /* Ajusta el tamaño según sea necesario */
+}
+.circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Hace que el div sea un círculo */
+    overflow: hidden; /* Oculta cualquier contenido fuera del círculo */
+    position: absolute;
+	background-color: #a9ddf3
+}
+
+.circle img {
+    width: 95%;
+    height: auto;
+    display: block;
 }
 
 @media only screen and (min-width: 960px) {

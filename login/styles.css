@@ -1,0 +1,36 @@
+body{
+margin-top:130px;
+}
+container{
+max-width:300px;
+margin:0 auto;
+text-align:center;
+}
+form{
+display:inline-block;
+text-align:Left;
+}
+label{
+display:block;
+margin-bottom:10px;
+}
+input{
+width:100%;
+padding:10px;
+margin-bottom:20px;
+font-size:16px;
+border-radius:5px;
+border:none;
+background-color: ☐#f2f2f2;
+}
+button{
+padding:10px;
+font-size:16px;
+border-radius:5px;
+border:none;
+background-color:
+☐#4CAF50;
+color:■4fff;
+cursor:pointer;
+width:100%;
+}
