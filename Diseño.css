@@ -1,22 +1,4 @@
-.formulario-container {
-    /* Centrar el formulario en la página */
-    margin: 0 auto;
-    width: 500px;
-    /* Esquema del formulario */
-    padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 1em;
-  }
 
-  .resultado {
-    margin: 0 auto; 
-    width: 400px;
-    height: 80px;
-    font-size: 16px;
-    padding: 10px;
-    text-align: center;
-    overflow-wrap: break-word;
-  }
   h1 {
     font-size: 36px;
     color: #333; 
@@ -28,11 +10,6 @@ footer {
   background-color: #2c3e50;
   color: #fff;
   padding: 30px 0;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
 }
 
 .left-content,
@@ -66,8 +43,6 @@ footer {
 .clearfix {
   clear: both;
 }
-
-
 
 .container {
     display: flex;
@@ -105,3 +80,53 @@ footer {
 .link:hover {
     color: #007bff; 
 }
+
+.formulario-container {
+  /* Centrar el formulario en la página */
+  margin: 0 auto;
+  width: 90%;
+  /* Esquema del formulario */
+  padding: 1%;
+  border: 1px solid #000000;
+  border-radius: 1em;
+}
+
+.resultado {
+  margin: 0 auto; 
+  width: 400px;
+  height: 80px;
+  font-size: 16px;
+  padding: 10px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+.body {
+  background-image: url('fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  align-items: center;
+  
+}
+/* Estilo para la línea punteada */
+  .dotted-line {
+      stroke-dasharray: 5;
+      stroke-dashoffset: 5;
+      animation: dash 2s linear infinite;
+  }
+
+  /* Animación para mover el dash */
+  @keyframes dash {
+      to {
+          stroke-dashoffset: 0;
+      }
+  }
+  /* Estilo para el contenedor del SVG */
+  #svg-container {
+      /*border: 2px solid red;*/
+      transition: left 1s ease; /* Agregar una transición para suavizar el movimiento */
+  }
+  #divcard{
+    margin: 2% 2% 2% 2%;
+  }
