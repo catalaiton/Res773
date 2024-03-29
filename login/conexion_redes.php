@@ -1,5 +1,4 @@
 <?php
-function conectar() {
     $host = "localhost";
     $user = "root";
     $pass = "";
@@ -8,9 +7,8 @@ function conectar() {
     $mysqli = new mysqli($host, $user, $pass, $dbname);
     
     if ($mysqli->connect_errno) {
-        throw new Exception("Error al conectar a la base de datos: " . $mysqli->connect_error);
+        die("Conexión Fallida: " . $mysqli->connect_error);
+    } else {
+        echo "Conectado xd";
     }
-    
-    return $mysqli;
-}
 ?>
