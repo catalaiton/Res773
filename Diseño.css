@@ -101,7 +101,8 @@ footer {
   overflow-wrap: break-word;
 }
 .body {
-  background-image: url('fondo.jpg');
+  /*background-image: url('fondo.jpg');*/
+  background-color: rgb(157, 210, 212);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -129,4 +130,7 @@ footer {
   }
   #divcard{
     margin: 2% 2% 2% 2%;
+  }
+  #divi{
+    text-align: center;
   }

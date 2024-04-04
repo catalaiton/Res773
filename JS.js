@@ -92,9 +92,7 @@ const escenariosOcupacionales = [
   
 
   function PTRadiada() {
-    // Evita el comportamiento predeterminado del envío del formulario
-    event.preventDefault();
-  
+    
     // Obtiene los valores de los elementos del formulario
     const frecuencia = parseFloat(document.getElementById("Frecuencia").value);
     const ganancia = parseFloat(document.getElementById("Ganancia").value);
@@ -102,6 +100,10 @@ const escenariosOcupacionales = [
     const distancia = parseFloat(document.getElementById("Distancia").value);
     const potencia = parseFloat(document.getElementById("Potencia").value);
     const tipoUsuario = document.getElementById("TipoUsuario").value;
+    // Evita el comportamiento predeterminado del envío del formulario
+    event.preventDefault();
+  
+   
   
     // Comprueba si algún campo está vacío
     if (isNaN(frecuencia) || isNaN(ganancia) || isNaN(altura) || isNaN(distancia) || isNaN(potencia)) {
@@ -164,11 +166,14 @@ const escenariosOcupacionales = [
   
     const SARStr = ` ${SAR.toFixed(3)} W/kg.`;
     const limiteSARStr = ` Limite para ${tipoUsuario}: ${limiteSAR} W/kg.`;
-    const cumplimientoStr = `${SAR <= limiteSAR ? "Cumple con la Resolución 773" : "No cumple con la Resolución 773"}`;
+
+    const cumplimientoStr = `${SAR <= limiteSAR ?  "Cumple con la Resolución 773\n ARTÍCULO 4o. FUENTES INHERENTEMENTE CONFORMES.\n<Resolución derogada por el artículo 14 de la Resolución 754 de 2016>\nARTÍCULO 5o. FUENTES NORMALMENTE CONFORMES. \n<Resolución derogada por el artículo 14 de la Resolución 754 de 2016> \nARTÍCULO 9o. METODOLOGÍA DE MEDICIONES.\n <Resolución derogada por el artículo 14 de la Resolución 754 de 2016> \n"
+                                                    : "No cumple con la Resolución 773 , \ninflingue los articulos validado en el ITU-T Rec. K.100"}`;
+
   
     SAR1.value = SARStr;
     limite.value = limiteSARStr;
     cumplimiento.value = cumplimientoStr;
+
   }
-  
   
