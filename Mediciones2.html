@@ -15,6 +15,10 @@
 
     <!--<![endif]-->
 	<title>RES-773</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+	<script src="html2pdf.bundle.min.js"></script>
+	<script src="script.js"></script>
 
 	<style type="text/css" media="screen">
 		/* Linked Styles */
@@ -213,10 +217,10 @@
                                                                                         <h6>Limite para tipo de usuario</h6>
                                                                                         <input type="text" id="limite" class="resultado form-control" style="max-width: 100%; min-height: 55px;" disabled><br>
                                                                                         <h6>Cumplimiento</h6>
-                                                                                        <textarea type="text" id="cumplimiento" class="resultado form-control" style="max-width: 100%; min-height: 155px;" disabled></textarea>
+                                                                                        <textarea type="text" id="cumplimiento" class="resultado form-control" style="max-width: 100%; min-height: 400px;" disabled></textarea>
 																						<h6>limite exposicion</h6>
 																						<input type="text" id="resultadosl" class="resultado form-control" style="max-width: 100%;">
-                                                                                
+																						<button type="submit" class="btn btn-primary" id="btnCrearPdf"">imprimir</button>
 																					</div>
                                                                             </form>
 																		</table>

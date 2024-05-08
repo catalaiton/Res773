@@ -175,5 +175,6 @@ const escenariosOcupacionales = [
     limite.value = limiteSARStr;
     cumplimiento.value = cumplimientoStr;
 
+
   }
-  
+
